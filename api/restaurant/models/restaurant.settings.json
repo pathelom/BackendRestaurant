@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "restaurants",
+  "info": {
+    "name": "restaurant"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "emailAddress": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "json"
+    },
+    "plats": {
+      "via": "restaurant",
+      "collection": "plats"
+    },
+    "category": {
+      "via": "restaurants",
+      "model": "categories"
+    }
+  }
+}

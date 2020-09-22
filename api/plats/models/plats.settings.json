@@ -1,0 +1,32 @@
+{
+  "connection": "default",
+  "collectionName": "plats",
+  "info": {
+    "name": "plats"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "prix": {
+      "type": "integer"
+    },
+    "restaurant": {
+      "model": "restaurant",
+      "via": "plats"
+    },
+    "jour": {
+      "type": "string"
+    }
+  }
+}
